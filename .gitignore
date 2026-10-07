@@ -1,0 +1,47 @@
+# Secrets / local runtime config
+_HE_THONG/config/.env
+_HE_THONG/data/*.db
+_HE_THONG/data/*.db-*
+_HE_THONG/data/*.sqlite*
+_HE_THONG/data/*.log
+_HE_THONG/data/logs/
+# Server output captured when the app is launched from a wrapper script
+_HE_THONG/app/*.log
+_HE_THONG/data/oauth_token.json
+# Per-channel OAuth tokens and the OAuth state file are credentials too
+_HE_THONG/data/oauth_*.json
+_HE_THONG/data/backups/
+
+# web_video_sidecar.py Playwright browser profiles — real login session
+# cookies for Flow/Meta AI/Gemini/ChatGPT, never source code
+_HE_THONG/app/youtube_monitor/_web_video_profile_*/
+_HE_THONG/app/youtube_monitor/_web_video_downloads_*/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+
+# User-generated production output & downloaded source media (large binaries,
+# not source code — see HUONG_DAN_SU_DUNG.md for folder structure)
+01_DU_AN/
+01_DU_AN/_nguyen_lieu/
+_HE_THONG/tai_lieu/*.mp3
+
+# Experiments: vendored clones, GPU model caches, smoke-test binary artifacts
+_THU_NGHIEM/
+
+# External project referenced by settings.py (PYVIDEOTRANS_ROOT), lives
+# outside this repo entirely — nothing to ignore here, listed for context only
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
